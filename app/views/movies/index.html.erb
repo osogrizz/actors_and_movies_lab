@@ -1,9 +1,25 @@
+<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/slate/bootstrap.min.css" rel="stylesheet">
+
+<h3> <%= link_to "Start search", actor_movies_path  %> </h3>
+
+
+
 <h1>Movies</h1>
 
-<ul>
-  <% @movies.each do |film| %>
-  <li><%= link_to "#{film.title} (#{film.year})", film %></li>
+
+
+
+<% @movies.each do |film| %>
+
+<div class="well">
+  <ul>  
+    <h4><li><%= link_to "#{film.title} (#{film.year})", film %></li></h4>
+  </ul>
+</div>
+
+
+
   <% end %>
-</ul>
+
 
 <%= link_to "Add movie", new_movie_path %>

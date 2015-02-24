@@ -1,0 +1,25 @@
+<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/slate/bootstrap.min.css" rel="stylesheet">
+
+<h3> <%= link_to "Start search", root_path  %> </h3>
+
+<h1>Actors</h1>
+
+
+
+  <% @actors.each do |actor| %>
+<ul>
+  <h2><li> <%=link_to actor.name, actor_path(actor)%> </li></h2>
+  
+</ul>  
+
+
+<p>
+  <%= link_to "edit actor", edit_actor_path(actor) %>
+</p>
+
+<% end %>
+
+
+<p>
+<%= link_to "Add actor", new_actor_path %>
+</p>

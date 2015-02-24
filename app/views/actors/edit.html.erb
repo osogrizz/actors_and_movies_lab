@@ -1,0 +1,19 @@
+<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/slate/bootstrap.min.css" rel="stylesheet">
+
+<h1>Edit Actor</h1>
+
+
+<%= form_for @actor do |f| %>
+<%= f.text_field :name %>
+
+  
+<%= f.submit "Update" %>
+
+<% end %>
+<p>
+  <%= button_to "delete", actor_path(@actor), method: :delete %>
+</p>
+
+<p>
+  <%= link_to "Back to actor", actor_path %>
+</p>

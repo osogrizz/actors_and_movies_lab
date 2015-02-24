@@ -1,6 +1,14 @@
+<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/slate/bootstrap.min.css" rel="stylesheet">
+
+<h3> <%= link_to "Start search", actor_movies_path  %> </h3>
+
 <h1><%= @movie.title %></h1>
 
 <p><%= @movie.year %></p>
+
+
+
+
 
 <%= link_to "Edit", edit_movie_path(@movie) %>
 <%= button_to "Delete", movie_path(@movie), :method => :delete %>
